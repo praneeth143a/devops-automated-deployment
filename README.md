@@ -5,7 +5,7 @@ Docker, Ansible, Bash, EC2 instance.
 
 # Project Folder Structure
    ```
-      devops-project/
+   devops-project/
    │
    ├── app/
    │   ├── app.py
