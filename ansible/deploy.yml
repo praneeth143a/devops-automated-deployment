@@ -1,0 +1,19 @@
+- name: Deploy App
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Create directory
+      file:
+        path: /home/ubuntu/devops-project
+        state: directory
+
+    - name: Copy files
+      copy:
+        src: ../
+        dest: /home/ubuntu/devops-project
+
+    - name: Run container
+      command: docker-compose up -d --build
+      args:
+        chdir: /home/ubuntu/devops-project
