@@ -70,7 +70,7 @@ Docker, Ansible, Bash, EC2 instance.
    //insert data in it.
    ```
    [web]
-   <EC2_Public_Key> ansible_user=ubuntu ansible_ssh_private_key_file=<location of pem>
+   <EC2_Public_IP> ansible_user=ubuntu ansible_ssh_private_key_file=<location of pem>
    ```
 
    ```
@@ -167,7 +167,7 @@ Docker, Ansible, Bash, EC2 instance.
 
 7. Now comeback to main project folder and run this commands.
    ```
-   chmod +x /scripts/deploy.sh
+   chmod +x scripts/deploy.sh
 
    cd scripts
    ./deploy.sh
@@ -181,5 +181,12 @@ Docker, Ansible, Bash, EC2 instance.
    curl http://localhost
    ```
    
-   ```
-   
+9. Then run it in local browser.
+    ```
+    http://<EC2_Public_IP>
+    ```
+
+# Output
+DevOps EC2 Project Running
+
+<img width="1600" height="723" alt="WhatsApp Image 2026-04-14 at 10 06 00 PM" src="https://github.com/user-attachments/assets/2c029f1f-d80a-4914-a095-6ad0656fc44d" />
