@@ -1,7 +1,7 @@
 # Devops-Automated-Deployment
 
 To Implement this project, you need:
-Docker, Ansible, Bash, EC2 instance.
+Linux(command line), Docker, Ansible, Bash, EC2 instance.
 
 # Project Folder Structure
    ```
@@ -42,13 +42,13 @@ Docker, Ansible, Bash, EC2 instance.
    touch app.py && vi app.py
    ```
    
-   //insert data in it.
+   Insert data in it.
 
    ```
    from flask import Flask
    app = Flask(__name__)
 
-    @app.route('/')
+   @app.route('/')
    def home():
       return "DevOps EC2 Project Running "
 
@@ -56,26 +56,26 @@ Docker, Ansible, Bash, EC2 instance.
       app.run(host='0.0.0.0', port=5000)
    ```
 
-   //create requirements.
+   Create requirements.
 
    ```
    touch requirements.txt && vi requirements.txt
    ```
 
-   //insert data in it.
+   Insert data in it.
 
    ```
    flask
    ```
 
-   // create Dockerfile and insert data.
+   Create Dockerfile and insert data.
 
    ```
    vi Dockerfile
 
    //insert data
 
-   FROM python:3.9-silm
+   FROM python:3.9-slim
    WORKDIR /app
    COPY . .
    RUN pip install -r requirements.txt
@@ -88,7 +88,7 @@ Docker, Ansible, Bash, EC2 instance.
    cd ansible
    vi inventory.ini
    ```
-   //insert data in it.
+   Insert data in it.
    ```
    [web]
    <EC2_Public_IP> ansible_user=ubuntu ansible_ssh_private_key_file=<location of pem>
@@ -97,7 +97,7 @@ Docker, Ansible, Bash, EC2 instance.
    ```
    vi setup.yml
    ```
-   //insert data in it.
+   Insert data in it.
      ```
       - name: Setup EC2
      hosts: web
@@ -128,7 +128,7 @@ Docker, Ansible, Bash, EC2 instance.
    ```
    vi deploy.yml
    ```
-   //insert data in it.
+   Insert data in it.
    ```
    - name: Deploy App
      hosts: web
@@ -155,7 +155,7 @@ Docker, Ansible, Bash, EC2 instance.
    ```
    vi docker-compose.yml
    ```
-   //insert data in it.
+   Insert data in it.
    ```
    version: '3'
 
@@ -171,7 +171,7 @@ Docker, Ansible, Bash, EC2 instance.
    ```
       cd scripts && vi deploy.sh
    ```
-   //insert data in it.
+   Insert data in it.
    
    ```
    #!/bin/bash
