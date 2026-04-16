@@ -107,7 +107,7 @@ Docker, Ansible, Bash, EC2 instance.
    ```
    vi deploy.yml
    ```
-//insert data in it.
+   //insert data in it.
    ```
    - name: Deploy App
      hosts: web
