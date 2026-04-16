@@ -3,6 +3,27 @@
 To Implement this project, you need:
 Docker, Ansible, Bash, EC2 instance.
 
+# Project Folder Structure
+   ```
+      devops-project/
+   │
+   ├── app/
+   │   ├── app.py
+   │   ├── requirements.txt
+   │   └── Dockerfile
+   │
+   ├── ansible/
+   │   ├── inventory.ini
+   │   ├── setup.yml
+   │   └── deploy.yml
+   │
+   ├── scripts/
+   │   └── deploy.sh
+   │
+   └── docker-compose.yml
+   ```
+
+
 # Step-by-Step Process to implement:
 
 1. Create a folder.
